@@ -84,13 +84,20 @@
         .title-container {
             display: flex;
             align-items: center;
-            gap: 10px; /* Adjust gap between titles as needed */
+            gap: 10px; /* 调整标题之间的间距 */
+            white-space: nowrap; /* 防止文本换行 */
         }
-        .title-container .title {
-            margin: 0;
-            padding: 5px 10px; /* Add padding if needed */
-            background-color: #f0f0f0; /* Add background color if needed */
-            border-radius: 5px; /* Add border radius if needed */
+        .title-container a {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px; /* 添加内边距 */
+            background-color: #f0f0f0; /* 添加背景颜色 */
+            border-radius: 5px; /* 添加圆角 */
+            text-decoration: none; /* 去掉下划线 */
+            color: inherit; /* 继承父元素颜色 */
+        }
+        .title-container a i {
+            margin-right: 5px; /* 图标和文本之间的间距 */
         }
     </style>
 </head>
@@ -98,10 +105,6 @@
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
             <div class="sidebar-menu-inner">
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="#" data-toggle="user-info-menu"></a>
-                    <a href="#" data-toggle="mobile-menu"></a>
-                </div>
                 <ul id="main-menu" class="main-menu">
                     <li>
                         <div class="title-container">
@@ -131,6 +134,7 @@
     </div>
 </body>
 </html>
+
                     <!-- <div class="submit-tag">
                         <a href="about.html">
                             <i class="linecons-heart"></i>
