@@ -85,19 +85,23 @@
             display: flex;
             align-items: center;
             gap: 10px; /* 调整标题之间的间距 */
-            white-space: nowrap; /* 防止文本换行 */
         }
-        .title-container a {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px; /* 添加内边距 */
+        .title-container .title {
+            margin: 0;
+            padding: 5px 10px; /* 添加填充 */
             background-color: #f0f0f0; /* 添加背景颜色 */
-            border-radius: 5px; /* 添加圆角 */
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit; /* 继承父元素颜色 */
+            border-radius: 5px; /* 添加边框圆角 */
         }
-        .title-container a i {
-            margin-right: 5px; /* 图标和文本之间的间距 */
+        .mobile-menu-toggle {
+            display: flex;
+            gap: 10px; /* 调整按钮之间的间距 */
+        }
+        .mobile-menu-toggle a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: #ccc; /* 按钮背景颜色 */
+            border-radius: 5px; /* 按钮边框圆角 */
         }
     </style>
 </head>
@@ -131,15 +135,7 @@
                                 <span class="title">看书搜书</span>
                             </a>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 
-        
                     <!-- <div class="submit-tag">
                         <a href="about.html">
                             <i class="linecons-heart"></i>
