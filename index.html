@@ -33,57 +33,60 @@
     })();
         
      </script>
+    
     <style>
-    /* 新增样式 */
-    .sidebar {
-        position: fixed; /* 使侧边栏固定定位 */
-        top: 0; /* 侧边栏顶部对齐 */
-        left: -300px; /* 初始时隐藏在屏幕左侧 */
-        width: 300px; /* 侧边栏宽度 */
-        height: 100vh; /* 占满整个视口高度 */
-        background-color: #f0f0f0; /* 侧边栏背景颜色 */
-        transition: all 0.3s ease; /* 平滑过渡效果 */
-    }
-    .sidebar.open {
-        left: 0; /* 展开时显示在屏幕 */
-    }
-    .toggle-btn {
-        position: absolute; /* 绝对定位，用于放置切换按钮 */
-        top: 20px; /* 距离顶部距离 */
-        right: 20px; /* 距离右侧距离 */
-        cursor: pointer; /* 鼠标悬停时变为手型 */
-        z-index: 1000; /* 确保按钮在最上层 */
-    }
-    .toggle-btn i { /* 使用Font Awesome图标 */
-        font-size: 30px;
-        color: white;
-    }
-</style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0; /* 菜单栏默认显示在左侧 */
+            width: 300px;
+            height: 100vh;
+            background-color: #f0f0f0;
+            transition: all 0.3s ease;
+            z-index: 1000; /* 确保菜单栏层级最高 */
+        }
+        .sidebar.hidden {
+            left: -300px; /* 菜单栏隐藏时的位置 */
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px; /* 按钮在左侧 */
+            cursor: pointer;
+            z-index: 1001; /* 按钮层级高于菜单栏以便点击 */
+        }
+        .toggle-btn i {
+            font-size: 30px;
+            color: #000; /* 黑色按钮图标 */
+        }
+    </style>
 
 </head>
 
 <body>
     <!-- 添加切换按钮 -->
 <div class="toggle-btn" onclick="toggleSidebar()">
-    <i class="fas fa-bars"></i> <!-- 使用Font Awesome的菜单图标 -->
-</div>
+        <i class="fas fa-bars"></i>
+    </div>
 
-<!-- 侧边栏内容 -->
-<div id="sidebar" class="sidebar">
-    <!-- 侧边栏内部元素，如菜单项等 -->
-    <ul>
-        <li><a href="#">菜单项1</a></li>
-        <li><a href="#">菜单项2</a></li>
-        <!-- ... -->
-    </ul>
-</div>
+    <!-- 侧边栏内容 -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">菜单项1</a></li>
+            <li><a href="#">菜单项2</a></li>
+            <!-- 更多菜单项... -->
+        </ul>
+    </div>
 
-<!-- 在现有脚本之后新增切换侧边栏的函数 -->
-<script>
-    function toggleSidebar() {
-        document.getElementById('sidebar').classList.toggle('open');
-    }
-</script>
+    <!-- 页面主要内容（省略） -->
+
+    <!-- 脚本区域 -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        }
+    </script>
+
         <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
     </div>
 
