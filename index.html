@@ -74,38 +74,56 @@
                 <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
         </div>
-        <!--搜索结束--><!DOCTYPE html>
+        <!--搜索结束-->
+        <<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>固定侧边栏示例</title>
+<title>可切换固定侧边栏示例</title>
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 防止水平滚动 */
   }
   
   .indexWrapMenu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -200px; /* 初始时隐藏在屏幕外 */
     height: 100%;
     width: 200px;
-    overflow-y: auto;
     background-color: #f1f1f1;
     padding: 10px;
+    transition: left 0.3s; /* 平滑过渡效果 */
   }
 
-  .indexWrapMenu a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 5px 0;
+  .indexWrapMenu.show { /* 添加一个类用于显示侧边栏 */
+    left: 0;
+  }
+
+  .toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* 确保按钮在最上层 */
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  main {
+    margin-left: 200px; /* 为主要内容区留出侧边栏的空间 */
+    padding: 20px;
   }
 </style>
 </head>
 <body>
+
+<button class="toggleButton" onclick="toggleSidebar()">☰ 侧边栏</button>
 
 <div class="indexWrapMenu">
   <a href="#section1">首页</a>
@@ -113,6 +131,11 @@
   <a href="#section3">联系我们</a>
   <a href="#section4">关于</a>
 </div>
+<script>
+  function toggleSidebar() {
+    document.querySelector('.indexWrapMenu').classList.toggle('show');
+  }
+</script>
 
 </body>
 </html>
