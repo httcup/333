@@ -33,47 +33,44 @@
     })();
         
      </script>
-    
     <style>
         .sidebar {
             position: fixed;
             top: 0;
-            left: 0; /* 菜单栏默认显示在左侧 */
+            left: 0;
             width: 300px;
             height: 100vh;
             background-color: transparent;
             transition: all 0.3s ease;
-            z-index: 1000; /* 确保菜单栏层级最高 */
+            z-index: 100;
         }
-        .sidebar.hidden {
-            left: -300px; /* 菜单栏隐藏时的位置 */
+        .hidden {
+            left: -300px;
         }
         .toggle-btn {
             position: fixed;
             top: 20px;
-            left: 20px; /* 按钮在左侧 */
+            left: 20px;
             cursor: pointer;
-            z-index: 1001; /* 按钮层级高于菜单栏以便点击 */
+            z-index: 1001;
         }
         .toggle-btn i {
             font-size: 30px;
-            color: #000; /* 黑色按钮图标 */
+            color: #000;
         }
     </style>
-
-
 </head>
 
 <body>
-    <!-- 添加切换按钮 -->
-<div class="toggle-btn" onclick="toggleSidebar()">
+    <!-- 切换按钮保持不变 -->
+    <div class="toggle-btn" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
     </div>
 
-    <!-- 侧边栏内容 -->
-    <div id="sidebar" class="sidebar">
+    <!-- 侧边栏内容，添加hidden类以默认隐藏 -->
+    <div id="sidebar" class="sidebar hidden">
         <ul>
-            <br><br><br><br>
+            <br><br><br>
             <li><a href="#我的常用">我的常用</a></li>
             <li><a href="#">菜单项2</a></li>
             <!-- 更多菜单项... -->
@@ -82,13 +79,13 @@
 
     <!-- 页面主要内容（省略） -->
 
-    <!-- 脚本区域 -->
+    <!-- 脚本区域，保持原样 -->
     <script>
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('hidden');
         }
     </script>
-
+</body>
         <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
     </div>
 
