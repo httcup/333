@@ -38,28 +38,34 @@
         .sidebar {
             position: fixed;
             top: 0;
-            left: 0; /* 菜单栏默认显示在左侧 */
+            left: 0;
             width: 300px;
             height: 100vh;
-            background-color: transparent;
+            background-color: transparent; /* 侧边栏透明背景 */
             transition: all 0.3s ease;
-            z-index: 1000; /* 确保菜单栏层级最高 */
+            z-index: 1000;
         }
         .sidebar.hidden {
-            left: -300px; /* 菜单栏隐藏时的位置 */
+            left: -300px;
         }
         .toggle-btn {
-            position: fixed;
+            position: absolute;
             top: 20px;
-            left: 20px; /* 按钮在左侧 */
+            left: 100%;
+            transform: translateX(-100%);
             cursor: pointer;
-            z-index: 1001; /* 按钮层级高于菜单栏以便点击 */
+            z-index: 1001;
         }
         .toggle-btn i {
             font-size: 30px;
             color: #000; /* 黑色按钮图标 */
         }
+        /* 为了防止内容重叠，给侧边栏内部元素添加上边距 */
+        .sidebar > * {
+            padding-top: 60px;
+        }
     </style>
+
 
 </head>
 
