@@ -75,42 +75,128 @@
             </div>
         </div>
         <!--搜索结束-->
-        <!-- skin-white -->
         <!DOCTYPE html>
 <html lang="cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Sidebar</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        
+        .page-container {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar-menu {
+            width: 250px;
+            background-color: #ffffff; /* 背景色调整为白色 */
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            transition: all 0.3s ease; /* 平滑过渡效果 */
+            z-index: 999; /* 确保侧边栏在最上层 */
+        }
+        
+        .sidebar-menu-toggle {
+            display: none; /* 默认隐藏切换按钮 */
+        }
+        
+        .sidebar-menu.fixed {
+            transform: translateX(-250px); /* 在小屏下隐藏侧边栏 */
+        }
+        
+        .sidebar-menu-toggle.visible-xs {
+            display: block; /* 在小屏下显示切换按钮 */
+        }
+        
+        .sidebar-menu-inner {
+            padding: 20px;
+        }
+        
         .title-container {
             display: flex;
-            flex-wrap: wrap; /* 允许内容换行 */
-            gap: 10px; /* 调整标题之间的间距 */
+            flex-direction: column;
+            gap: 10px;
         }
+        
         .title-container a {
             display: flex;
             align-items: center;
-            padding: 5px 10px; /* 添加内边距 */
-            background-color: #f0f0f0; /* 添加背景颜色 */
-            border-radius: 5px; /* 添加圆角 */
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit; /* 继承父元素颜色 */
-            white-space: nowrap; /* 防止链接内部换行 */
+            padding: 5px 10px;
+            background-color: transparent;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap;
         }
+        
         .title-container a i {
-            margin-right: 5px; /* 图标和文本之间的间距 */
+            margin-right: 5px;
+        }
+        
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease; /* 内容区域平滑过渡 */
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 767px) { /* 设定移动端断点 */
+            .sidebar-menu.fixed {
+                transform: none; /* 在小屏下显示侧边栏 */
+            }
+            
+            .content {
+                margin-left: 0; /* 侧边栏收起时，内容区左边缘对齐 */
+            }
+            
+            .sidebar-menu-toggle.visible-xs {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1000;
+                cursor: pointer;
+            }
+            
+            .sidebar-menu {
+                transform: translateX(-250px);
+            }
+            
+            .sidebar-menu.active {
+                transform: none;
+            }
         }
     </style>
+    <script>
+        // 简单的JavaScript示例，用于切换侧边栏显示状态
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.mobile-menu-toggle a');
+            const sidebarMenu = document.querySelector('.sidebar-menu');
+
+            toggleButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                sidebarMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-toggle visible-xs">
+                <a href="#" title="Toggle Menu"><i class="linecons-menu"></i></a>
+            </div>
             <div class="sidebar-menu-inner">
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="" data-toggle="user-info-menu"></a>
-                    <a href="" data-toggle="mobile-menu"></a>
-                </div>
                 <ul id="main-menu" class="main-menu">
                     <li>
                         <div class="title-container">
@@ -159,7 +245,7 @@
     </div>
 </body>
 </html>
-
+       
      <ul class="mylist row">
              <!------>
             <li class="title"><svg class="icon" aria-hidden="true">
@@ -1708,97 +1794,6 @@
                         <use xlink:href="#icon-zhibodaping"></use>
                     </svg><span>直播大屏</span></a></li>   
         </ul>
-        <!-- skin-white -->
-        <!DOCTYPE html>
-<html lang="cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .title-container {
-            display: flex;
-            flex-wrap: wrap; /* 允许内容换行 */
-            gap: 10px; /* 调整标题之间的间距 */
-        }
-        .title-container a {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px; /* 添加内边距 */
-            background-color: #f0f0f0; /* 添加背景颜色 */
-            border-radius: 5px; /* 添加圆角 */
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit; /* 继承父元素颜色 */
-            white-space: nowrap; /* 防止链接内部换行 */
-        }
-        .title-container a i {
-            margin-right: 5px; /* 图标和文本之间的间距 */
-        }
-    </style>
-</head>
-<body>
-    <div class="page-container">
-        <div class="sidebar-menu toggle-others fixed">
-            <div class="sidebar-menu-inner">
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="" data-toggle="user-info-menu"></a>
-                    <a href="" data-toggle="mobile-menu"></a>
-                </div>
-                <ul id="main-menu" class="main-menu">
-                    <li>
-                        <div class="title-container">
-                            <a href="#置顶" class="smooth">
-                                <span class="title">返回顶部</span>
-                            </a>
-                            <a href="#AI集合" class="smooth">
-                                <span class="title">AI</span>
-                            </a>
-                            <a href="#邮箱" class="smooth">
-                                <i class="linecons-star"></i>
-                                <span class="title">邮箱</span>
-                            </a>
-                            <a href="#今日热榜" class="smooth">
-                                <span class="title">今日热榜</span>
-                            </a>
-                            <a href="#影视资源" class="smooth">
-                                <span class="title">影视资源</span>
-                            </a>
-                            <a href="#在线工具" class="smooth">
-                                <span class="title">在线工具</span>
-                            </a>
-                            <a href="#看书搜书" class="smooth">
-                                <span class="title">看书搜书</span>
-                            </a>
-                            <a href="#网盘存储" class="smooth">
-                                <span class="title">网盘存储</span>
-                            </a>
-                            <a href="#图片工具" class="smooth">
-                                <span class="title">图片工具</span>
-                            </a>
-                            <a href="#文本识别" class="smooth">
-                                <span class="title">文本识别</span>
-                            </a>
-                            <a href="#自媒体平台" class="smooth">
-                                <span class="title">自媒体</span>
-                            </a>
-                            <a href="#在线文档" class="smooth">
-                                <span class="title">在线文档</span>
-                            </a>
-                            <a href="#我的常用" class="smooth">
-                                <span class="title">我的常用</span>
-                            </a><pre class="mt-5 mb-3 text-muted text-left">
-        小胡自己收藏的网址，仅限本人做个人书签使用,网站来源于网络，对其内容不负任何责任。
-        若本站内容无意中侵犯到您的版权利益，请联系我们，我们会在收到信息后尽快给予处理，联系邮箱：httcup@gmali.com
-    </pre>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-    </div>
     <script>
     eval(function(e, t, a, c, i, n) {
         if (i = function(e) {
