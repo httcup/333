@@ -33,61 +33,6 @@
     })();
         
      </script>
-    <style>
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 300px;
-            height: 100vh;
-            background-color: transparent;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-        .hidden {
-            left: -300px;
-        }
-        .toggle-btn {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            cursor: pointer;
-            z-index: 999;
-        }
-        .toggle-btn i {
-            font-size: 30px;
-            color: #000;
-        }
-    </style>
-</head>
-
-<body>
-    <!-- 切换按钮保持不变 -->
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-    </div>
-
-    <!-- 侧边栏内容，添加hidden类以默认隐藏 -->
-    <div id="sidebar" class="sidebar hidden">
-        <ul>
-            <br><br><br>
-            <li><a href="#我的常用">我的常用</a></li>
-            <li><a href="#">菜单项2</a></li>
-            <!-- 更多菜单项... -->
-        </ul>
-    </div>
-
-    <!-- 页面主要内容（省略） -->
-
-    <!-- 脚本区域，保持原样 -->
-    <script>
-    function toggleSidebar() {
-        document.getElementById('sidebar').classList.toggle('hidden');
-    }
-</script>
-</body>
-        <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
-    </div>
 
    
                         <!-- 关于网站 -->
