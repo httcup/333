@@ -79,6 +79,25 @@
         });
     });
 </script>
+/* 修改导航列表中所有文本的字体大小和行高（行距） */
+.s-type-list a {
+    font-size: 16px; /* 改变文字大小 */
+    line-height: 1.5; /* 调整行距，1.5表示基础字体大小的1.5倍 */
+    text-align: left; /* 文字靠左对齐 */
+}
+
+/* 确保图标和文本在同一行内对齐并居中，这里假设图标有固定宽度，进行相应调整 */
+.s-type-list i.linecons-star {
+    display: inline-block; /* 保证图标作为内联块级元素，可以设置宽高 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    margin-right: 5px; /* 图标与文本之间的间距 */
+}
+
+/* 如果需要调整包含图标链接的整体样式 */
+.s-type-list a {
+    display: flex; /* 使用弹性盒子模型 */
+    align-items: center; /* 垂直居中对齐 */
+}
 </head>
 <body>
 
