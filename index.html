@@ -23,11 +23,13 @@
     <script src="sou.js"></script>
     <link rel='stylesheet' href='style.css'>
     <!--测试模式-->
+    
     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <button id="myButton">点击我</button>
 <style>
     .float-btn {
         position: fixed; /* 固定位置 */
@@ -35,7 +37,7 @@
         right: 20px; /* 距离右侧的距离 */
         width: 50px; /* 按钮宽度 */
         height: 50px; /* 按钮高度 */
-        background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+        background-color: #000; /* 半透明黑色背景 */
         border-radius: 50%; /* 圆形按钮 */
         cursor: pointer; /* 鼠标悬停时的指针形状 */
         transition: all 0.3s ease; /* 动画过渡效果 */
@@ -44,7 +46,7 @@
         opacity: 0; /* 初始不透明度为0，即隐藏 */
     }
     .float-btn:hover {
-        background-color: rgba(0, 0, 0, 0.8); /* 悬停时变不透明 */
+        background-color: #000; /* 悬停时变不透明 */
     }
     /* 下面是展开内容的样式，这里假设为一个简单的div */
     .float-content {
@@ -54,7 +56,7 @@
         right: 20px;
         width: 200px;
         padding: 10px;
-        background-color: #fff;
+        background-color: #000;
         border: 1px solid #ddd;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 998;
