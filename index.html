@@ -57,20 +57,20 @@
 </html>
 
     <!--测试模式-->
-
-<!DOCTYPE html>
+    
+<!--测试模式2-->
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>悬浮按钮及折叠菜单示例</title>
+<title>悬浮导航按钮示例</title>
 <style>
     /* CSS样式 */
     #myButton {
         position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 20px;
+        bottom: 20px; /* 改为底部固定 */
+        left: 20px; /* 距离左侧的距离 */
         z-index: 999;
         padding: 10px 20px;
         font-size: 16px;
@@ -80,56 +80,51 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    #menu {
+    .s-type-list {
+        display: none; /* 默认隐藏导航列表 */
         position: fixed;
-        top: 60%; /* 菜单出现的位置，调整以适应按钮 */
+        bottom: 60px; /* 与按钮底部保持一定距离 */
         left: 20px;
-        z-index: 998;
-        background-color: #f9f9f9;
+        background-color: #fff;
         border: 1px solid #ddd;
         padding: 10px;
-        display: none; /* 初始隐藏 */
         width: 200px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+        z-index: 998;
+    }
+    /* 当按钮激活时显示导航列表 */
+    .active-s-type .s-type-list {
+        display: block;
     }
 </style>
 <script>
-    // JavaScript部分
     document.addEventListener('DOMContentLoaded', function() {
         var button = document.getElementById('myButton');
-        var menu = document.getElementById('menu');
-
+        var sTypeList = document.querySelector('.s-type-list');
+        
         button.addEventListener('click', function() {
-            if (menu.style.display === 'none') {
-                menu.style.display = 'block'; // 展开菜单
-            } else {
-                menu.style.display = 'none'; // 折叠菜单
-            }
+            sTypeList.parentElement.classList.toggle('active-s-type'); // 切换显示状态
         });
     });
 </script>
 </head>
 <body>
 
-<!-- 悬浮按钮 -->
-<button id="myButton">点点</button>
-
-<!-- 折叠菜单 -->
-<div id="menu">
-    <ul>
-        <li>菜单项1</li>
-        <li>菜单项2</li>
-        <li>菜单项3</li>
-    </ul>
+<!-- 悬浮按钮及导航列表容器 -->
+<div class="s-type">
+    <button id="myButton">导航</button>
+    <div class="s-type-list">
+        <label for="m_type-baidu" data-page="home" data-id="group-a" class="active">常用</label>
+        <label for="m_type-baidu1" data-page="home" data-id="group-b">搜索</label>
+        <label for="m_type-br" data-page="home" data-id="group-c">工具</label>
+        <label for="m_type-zhihu" data-page="home" data-id="group-d">社区</label>
+    </div>
 </div>
 
 </body>
 </html>
-
     
-<!--测试模式2-->
-    <div class="s-type"> <span></span> <div class="s-type-list"> <label for="m_type-baidu" data-page="home" data-id="group-a" class="active">常用</label><label for="m_type-baidu1" data-page="home" data-id="group-b">搜索</label><label for="m_type-br" data-page="home" data-id="group-c">工具</label><label for="m_type-zhihu" data-page="home" data-id="group-d">社区</label> </div> </div>
-     <!--测试模式2-->                   
+    <!--测试模式2-->                   
     <!-- 关于网站 -->
                         </br><!--div align="center"-->
           <!--img src="img/gzgzg.png" width="292" height="105"-->
