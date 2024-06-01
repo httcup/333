@@ -50,6 +50,20 @@
 }
 
 /* 定义导航列表样式 */
+.s-type-list .title,
+.s-type-list i.linecons-star + .title { /* 针对含有图标的标题进行特殊处理，确保图标后的文本也能应用同样的样式 */
+    font-size: 14px; /* 您可以根据需要调整字体大小 */
+    text-align: left; /* 文字靠左对齐 */
+    display: block; /* 使文本独占一行并易于控制行距 */
+    line-height: 1.5; /* 行距，数字越大行间距越大，这里是基础字体大小的1.5倍 */
+}
+
+/* 保持图标与文字对齐，这里假设图标是行内元素 */
+.s-type-list i.linecons-star {
+    display: inline-block; /* 使图标能够与文本垂直居中对齐 */
+    vertical-align: middle; /* 图标垂直居中 */
+    margin-right: 5px; /* 图标与文本间的间隔，可根据需要调整 */
+}
 .s-type-list {
     display: none; /* 默认隐藏导航列表 */
     position: fixed; /* 设置导航列表为固定定位 */
@@ -68,6 +82,7 @@
 .active-s-type .s-type-list {
     display: block; /* 显示导航列表 */
 }
+    
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -79,25 +94,6 @@
         });
     });
 </script>
-/* 修改导航列表中所有文本的字体大小和行高（行距） */
-.s-type-list a {
-    font-size: 16px; /* 改变文字大小 */
-    line-height: 1.5; /* 调整行距，1.5表示基础字体大小的1.5倍 */
-    text-align: left; /* 文字靠左对齐 */
-}
-
-/* 确保图标和文本在同一行内对齐并居中，这里假设图标有固定宽度，进行相应调整 */
-.s-type-list i.linecons-star {
-    display: inline-block; /* 保证图标作为内联块级元素，可以设置宽高 */
-    vertical-align: middle; /* 垂直居中对齐 */
-    margin-right: 5px; /* 图标与文本之间的间距 */
-}
-
-/* 如果需要调整包含图标链接的整体样式 */
-.s-type-list a {
-    display: flex; /* 使用弹性盒子模型 */
-    align-items: center; /* 垂直居中对齐 */
-}
 </head>
 <body>
 
