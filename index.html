@@ -39,7 +39,7 @@
         top: 80%; 
         transform: translateY(-50%); /* 使按钮垂直居中 */
         left: 10px; /* 距离左侧的距离 */
-        z-index: 1002;
+        z-index: 10000;
         padding: 10px 20px;
         font-size: 16px;
         background-color: transparent;
@@ -51,14 +51,14 @@
     .s-type-list {
         display: none; /* 默认隐藏导航列表 */
         position: fixed;
-        bottom: 20px; /* 与按钮底部保持一定距离 */
-        left: 20px;
+        bottom: 10px; /* 与按钮底部保持一定距离 */
+        left: 10px;
         background-color: #fff;
         border: 1px solid #ddd;
         padding: 10px;
-        width: 80px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0.1);
-        z-index: 1000;
+        width: 50px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0.1);
+        z-index: 9999;
     }
     /* 当按钮激活时显示导航列表 */
     .active-s-type .s-type-list {
@@ -86,6 +86,19 @@
         <label for="m_type-baidu1" data-page="home" data-id="group-b">搜索</label>
         <label for="m_type-br" data-page="home" data-id="group-c">工具</label>
         <label for="m_type-zhihu" data-page="home" data-id="group-d">社区</label>
+        <a href="#AI集合" class="smooth">
+                                <span class="title">AI</span>
+                            </a>
+        <a href="#邮箱" class="smooth">
+                                <i class="linecons-star"></i>
+                                <span class="title">邮箱</span>
+                            </a>
+        <a href="#今日热榜" class="smooth">
+                                <span class="title">今日热榜</span>
+                            </a>
+        <a href="#影视资源" class="smooth">
+                                <span class="title">影视资源</span>
+                            </a>
     </div>
 </div>
 
