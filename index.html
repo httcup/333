@@ -58,6 +58,74 @@
 
     <!--测试模式-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>悬浮按钮及折叠菜单示例</title>
+<style>
+    /* CSS样式 */
+    #myButton {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        z-index: 999;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #menu {
+        position: fixed;
+        top: 60%; /* 菜单出现的位置，调整以适应按钮 */
+        left: 20px;
+        z-index: 998;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 10px;
+        display: none; /* 初始隐藏 */
+        width: 200px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<script>
+    // JavaScript部分
+    document.addEventListener('DOMContentLoaded', function() {
+        var button = document.getElementById('myButton');
+        var menu = document.getElementById('menu');
+
+        button.addEventListener('click', function() {
+            if (menu.style.display === 'none') {
+                menu.style.display = 'block'; // 展开菜单
+            } else {
+                menu.style.display = 'none'; // 折叠菜单
+            }
+        });
+    });
+</script>
+</head>
+<body>
+
+<!-- 悬浮按钮 -->
+<button id="myButton">点点</button>
+
+<!-- 折叠菜单 -->
+<div id="menu">
+    <ul>
+        <li>菜单项1</li>
+        <li>菜单项2</li>
+        <li>菜单项3</li>
+    </ul>
+</div>
+
+</body>
+</html>
+
     
 <!--测试模式2-->
     <div class="s-type"> <span></span> <div class="s-type-list"> <label for="m_type-baidu" data-page="home" data-id="group-a" class="active">常用</label><label for="m_type-baidu1" data-page="home" data-id="group-b">搜索</label><label for="m_type-br" data-page="home" data-id="group-c">工具</label><label for="m_type-zhihu" data-page="home" data-id="group-d">社区</label> </div> </div>
