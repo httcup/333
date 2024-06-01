@@ -35,35 +35,41 @@
 <style>
     /* CSS样式 */
     #myButton {
-        position: fixed;
-        top: 80%; 
-        transform: translateY(-50%); /* 使按钮垂直居中 */
-        left: 10px; /* 距离左侧的距离 */
-        z-index: 999;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: transparent;
-        color: #000;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .s-type-list {
-        display: none; /* 默认隐藏导航列表 */
-        position: fixed;
-        bottom: 10px; /* 与按钮底部保持一定距离 */
-        left: 20px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        padding: 10px;
-        width: 50px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0.1);
-        z-index: 998;
-    }
-    /* 当按钮激活时显示导航列表 */
-    .active-s-type .s-type-list {
-        display: block;
-    }
+    position: fixed; /* 设置按钮为固定定位，使其在页面滚动时位置不变 */
+    top: 80%; /* 按钮距离页面顶部的位置，这里设置为80%，根据需要调整 */
+    transform: translateY(-50%); /* 通过垂直偏移使按钮在垂直方向上居中对齐 */
+    left: 10px; /* 按钮距离页面左侧的距离 */
+    z-index: 999; /* 设置较高的层叠顺序，确保按钮在页面的最上层 */
+    padding: 10px 20px; /* 按钮内部的上下左右内边距 */
+    font-size: 16px; /* 按钮文字的字体大小 */
+    background-color: #fff; /* 设置按钮背景为透明 */
+    color: #000; /* 按钮文字颜色 */
+    border: none; /* 移除按钮的边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    cursor: pointer; /* 更改鼠标悬停在按钮上时的指针图标为手型 */
+}
+
+/* 定义导航列表样式 */
+.s-type-list {
+    display: none; /* 默认隐藏导航列表 */
+    position: fixed; /* 设置导航列表为固定定位 */
+    top: 80%; /* 按钮距离页面顶部的位置，这里设置为80%，根据需要调整 */
+    bottom: 10px; /* 导航列表距离页面底部的位置，需根据按钮调整 */
+    transform: translateY(-50%); /* 通过垂直偏移使按钮在垂直方向上居中对齐 */
+    left: 10px; /* 导航列表距离页面左侧的距离 */
+    background-color: #fff; /* 导航列表背景颜色 */
+    font-size: 16px; /* 按钮文字的字体大小 */
+    border: none; /* 导航列表边框样式 */
+    padding: 15px; /* 导航列表内部的内边距 */
+    width: 50px; /* 导航列表的宽度 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1); /* 给导航列表添加阴影效果 */
+    z-index: 998; /* 设置层叠顺序，确保在其他内容之下，按钮之上 */
+}
+
+/* 当按钮被激活（即父元素拥有.active-s-type类）时，显示导航列表 */
+.active-s-type .s-type-list {
+    display: block; /* 显示导航列表 */
+}
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
