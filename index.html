@@ -22,9 +22,81 @@
     <script src="//at.alicdn.com/t/c/font_4550625_2aqppxfn0ba.js"></script>
     <script src="sou.js"></script>
     <link rel='stylesheet' href='style.css'>
+    <!--测试模式-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .float-btn {
+        position: fixed; /* 固定位置 */
+        bottom: 20px; /* 距离底部的距离 */
+        right: 20px; /* 距离右侧的距离 */
+        width: 50px; /* 按钮宽度 */
+        height: 50px; /* 按钮高度 */
+        background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+        border-radius: 50%; /* 圆形按钮 */
+        cursor: pointer; /* 鼠标悬停时的指针形状 */
+        transition: all 0.3s ease; /* 动画过渡效果 */
+        z-index: 999; /* 确保按钮在最上层 */
+        outline: none; /* 移除焦点边框 */
+        opacity: 0; /* 初始不透明度为0，即隐藏 */
+    }
+    .float-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* 悬停时变不透明 */
+    }
+    /* 下面是展开内容的样式，这里假设为一个简单的div */
+    .float-content {
+        display: none; /* 默认隐藏内容 */
+        position: fixed;
+        bottom: 80px; /* 调整以适应按钮高度 */
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+    }
+    /* 使用JavaScript控制内容的显示与隐藏 */
+    .show {
+        display: block;
+    }
+</style>
+<script>
+    // JavaScript用于切换内容的显示状态
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('floatBtn');
+        var content = document.getElementById('floatContent');
+        
+        btn.addEventListener('click', function() {
+            content.classList.toggle('show');
+        });
+    });
+</script>
+</head>
+<body>
 
+<!-- 悬浮按钮 -->
+<div id="floatBtn" class="float-btn"></div>
+
+<!-- 可折叠的内容 -->
+<div id="floatContent" class="float-content">
+    <p>这里是悬浮按钮展开后显示的内容。</p>
+</div>
+
+</body>
+</html>
+
+
+    <!--测试模式-->
+
+    
+<!--测试模式2-->
     <div class="s-type"> <span></span> <div class="s-type-list"> <label for="m_type-baidu" data-page="home" data-id="group-a" class="active">常用</label><label for="m_type-baidu1" data-page="home" data-id="group-b">搜索</label><label for="m_type-br" data-page="home" data-id="group-c">工具</label><label for="m_type-zhihu" data-page="home" data-id="group-d">社区</label> </div> </div>
-                        <!-- 关于网站 -->
+     <!--测试模式2-->                   
+    <!-- 关于网站 -->
                         </br><!--div align="center"-->
           <!--img src="img/gzgzg.png" width="292" height="105"-->
        </div>
