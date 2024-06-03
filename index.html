@@ -24,10 +24,11 @@
     <link rel='stylesheet' href='style.css'>
     <!--测试模式-->
     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>底部悬浮按钮</title>
+    <title>悬浮菜单栏示例</title>
     <style>
         /* 内联CSS样式 */
         #floatingButton {
@@ -46,16 +47,48 @@
         #floatingButton:hover {
             transform: scale(1.1);
         }
+        .menu {
+            position: fixed;
+            bottom: 70px; /* 根据按钮大小调整 */
+            right: 20px;
+            list-style-type: none;
+            display: none; /* 默认隐藏菜单 */
+            width: 200px; /* 菜单宽度 */
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .menu li {
+            padding: 8px 16px;
+            border-bottom: 1px solid #ddd; /* 分割线 */
+        }
+        .menu li:last-child {
+            border-bottom: none;
+        }
     </style>
 </head>
 <body>
     <!-- 悬浮按钮 -->
-    <button id="floatingButton">点击跳转</button>
+    <button id="floatingButton">☰</button>
+
+    <!-- 悬浮菜单 -->
+    <ul id="menu" class="menu">
+        <li><a href="#">菜单项 1</a></li>
+        <li><a href="#">菜单项 2</a></li>
+        <li><a href="#">菜单项 3</a></li>
+        <!-- 更多菜单项 -->
+    </ul>
 
     <script>
         // 内联JavaScript脚本
         document.getElementById('floatingButton').addEventListener('click', function() {
-            window.location.href = 'https://www.baidu.com'; // 替换成你想要跳转的链接
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
         });
     </script>
 </body>
