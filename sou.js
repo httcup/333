@@ -1,6 +1,6 @@
 
 document.getElementById('floatingButton').addEventListener('click', function() {
-    window.location.href = 'https://www.example.com'; // 替换成你想要跳转的链接
+    window.location.href = 'https://www.baidu.com'; // 替换成你想要跳转的链接
 });
 
 //关键词sug
