@@ -1,8 +1,4 @@
 
-document.getElementById('floatingButton').addEventListener('click', function() {
-    window.location.href = 'https://www.baidu.com'; // 替换成你想要跳转的链接
-});
-
 //关键词sug
 $(function() {
     //当键盘键被松开时发送Ajax获取数据
