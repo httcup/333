@@ -16,7 +16,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 .navbar-light .navbar-nav .nav-link:hover{ color: #fff; }
 /* --- search --- */
 #floatingButton {
-    position: fixed; /* 固定定位，始终在视口中 */
+    position: fixed; /* 固定定位 */
     bottom: 20px; /* 距离底部20px */
     right: 20px; /* 距离右侧20px */
     z-index: 9999; /* 确保按钮在页面最前方 */
