@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>小胡小胡的书签 httcup.com </title>
+    <title>香水 httcup.com </title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,10 +19,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" id="font-awesome-css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css?ver=1.1422" type="text/css" media="all">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="//at.alicdn.com/t/c/font_4550625_2aqppxfn0ba.js"></script>
+    <script src="//at.alicdn.com/t/c/font_4550625_frqj7lqndw4.js"></script>
     <script src="sou.js"></script>
     <link rel='stylesheet' href='style.css'>
-    <!--测试模式-->
+    
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?04ff64778587b3830e01c686c5cf06f3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+     </script>
+    
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +48,7 @@
             padding: 15px;
             margin: 0;
             border: none;
-            background-color: #fff;
+            background-color: #2ECC71;
             color: #000;
             border-radius: 50%;
             cursor: pointer;
@@ -53,16 +63,16 @@
             left: 20px;
             list-style-type: none;
             display: none; /* 默认隐藏菜单 */
-            width: 200px; /* 菜单宽度 */
+            width: 120px; /* 菜单宽度 */
             background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
             z-index: 2000; /* 确保菜单的z-index比按钮高 */
             border-radius: 5px;
             padding: 0;
             margin: 0;
         }
         #menu li {
-            padding: 8px 16px;
+            padding: 8px 8px;
             border-bottom: 1px solid #ddd; /* 分割线 */
         }
         #menu li:last-child {
@@ -80,16 +90,15 @@
 </head>
 <body>
     <!-- 悬浮按钮 -->
-    <button id="floatingButton">☰</button>
+    <button id="floatingButton">导航</button>
 
     <!-- 悬浮菜单 -->
     <ul id="menu">
-        <li><a href="#">菜单项 1</a></li>
-        <li><a href="#">菜单项 2</a></li>
-        <li><a href="#">菜单项 3</a></li>
+        <li><a href="#top" class="smooth"><span class="title">返回置顶</span><br></a></li>
+        <li><a href="#香水导航" class="smooth"><span class="title">香水导航</span><br></a></li>
         <li><a href="#我的常用" class="smooth"><span class="title">我的常用</span><br></a></li>
-        <li><a href="#AI集合" class="smooth"><span class="title">AI</span></a></li>
-        <li><a href="#邮箱" class="smooth"><span class="title">邮箱</span></a></li>
+        <li><a href="#AI集合" class="smooth"><span class="title">Ai集合</span></a></li>
+        <li><a href="#邮箱" class="smooth"><span class="title">邮箱登录</span></a></li>
         <li><a href="#今日热榜" class="smooth"><span class="title">今日热榜</span></a></li>
         <li><a href="#影视资源" class="smooth"><span class="title">影视资源</span></a></li>
         <li><a href="#在线工具" class="smooth"><span class="title">在线工具</span></a></li>
@@ -112,108 +121,19 @@
 </body>
 </html>
     
-   
-    <!--测试模式-->
-    
-<!--测试模式2-->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    
-    /* CSS样式 */
-    #myButton {
-    position: fixed; /* 设置按钮为固定定位，使其在页面滚动时位置不变 */
-    top: 5%; /* 按钮距离页面顶部的位置，这里设置为80%，根据需要调整 */
-    transform: translateY(-50%); /* 通过垂直偏移使按钮在垂直方向上居中对齐 */
-    left: 10px; /* 按钮距离页面左侧的距离 */
-    z-index: 100000; /* 设置较高的层叠顺序，确保按钮在页面的最上层 */
-    padding: 10px 20px; /* 按钮内部的上下左右内边距 */
-    font-size: 16px; /* 按钮文字的字体大小 */
-    background-color: #fff; /* 设置按钮背景为透明 */
-    color: #000; /* 按钮文字颜色 */
-    border: none; /* 移除按钮的边框 */
-    border-radius: 5px; /* 设置按钮圆角 */
-    cursor: pointer; /* 更改鼠标悬停在按钮上时的指针图标为手型 */
-}
 
-/* 定义导航列表样式 */
-.s-type-list .title,
-.s-type-list i.linecons-star + .title { /* 针对含有图标的标题进行特殊处理，确保图标后的文本也能应用同样的样式 */
-    font-size: 16px; /* 您可以根据需要调整字体大小 */
-    text-align: left; /* 文字靠左对齐 */
-    display: block; /* 使文本独占一行并易于控制行距 */
-}
-
-/* 保持图标与文字对齐，这里假设图标是行内元素 */
-.s-type-list i.linecons-star {
-    display: inline-block; /* 使图标能够与文本垂直居中对齐 */
-    vertical-align: middle; /* 图标垂直居中 */
-    margin-right: 5px; /* 图标与文本间的间隔，可根据需要调整 */
-}
-.s-type-list {
-    display: none; /* 默认隐藏导航列表 */
-    position: fixed; /* 设置导航列表为固定定位 */
-    top: 50%; /* 按钮距离页面顶部的位置，这里设置为80%，根据需要调整 */
-    transform: translateY(-50%); /* 通过垂直偏移使按钮在垂直方向上居中对齐 */
-    left: 10px; /* 导航列表距离页面左侧的距离 */
-    background-color: #fff; /* 导航列表背景颜色 */
-    font-size: 16px; /* 按钮文字的字体大小 */
-    border: none; /* 导航列表边框样式 */
-    padding: 10px; /* 增大了导航列表内部的内边距，以增大整体外观 */
-    width: 200px; /* 增大了导航列表的宽度，以容纳更大的文本或其他内容 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0.1); /* 给导航列表添加阴影效果 */
-    z-index: 99999; /* 设置层叠顺序，确保在其他内容之下，按钮之上 */
-}
-
-/* 当按钮被激活（即父元素拥有.active-s-type类）时，显示导航列表 */
-.active-s-type .s-type-list {
-    display: block; /* 显示导航列表 */
-}
-    
-</style>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var button = document.getElementById('myButton');
-        var sTypeList = document.querySelector('.s-type-list');
-        
-        button.addEventListener('click', function() {
-            sTypeList.parentElement.classList.toggle('active-s-type'); // 切换显示状态
-        });
-    });
-</script>
 </head>
-<body>
-<!-- 悬浮按钮及导航列表容器 -->
-<div class="s-type">
-    <button id="myButton">分类</button>
-    <div class="s-type-list">
-        <a href="#我的常用" class="smooth"><span class="title">我的常用</span><br></a>
-        <a href="#AI集合" class="smooth"><span class="title">AI</span></a><br>
-        <a href="#邮箱" class="smooth"><span class="title">邮箱</span><br></a>
-        <a href="#今日热榜" class="smooth"><span class="title">今日热榜</span><br></a>
-        <a href="#影视资源" class="smooth"><span class="title">影视资源</span><br></a>
-        <a href="#在线工具" class="smooth"><span class="title">在线工具</span><br></a>
-        <a href="#看书搜书" class="smooth"><span class="title">看书搜书</span><br></a>
-        <a href="#网盘存储" class="smooth"><span class="title">网盘存储</span><br></a>
-        <a href="#图片工具" class="smooth"><span class="title">图片工具</span><br></a>
-        <a href="#文本识别" class="smooth"><span class="title">文本识别</span><br></a>
-        <a href="#自媒体平台" class="smooth"><span class="title">自媒体平台</span><br></a>
-        <a href="#在线文档" class="smooth"><span class="title">在线文档</span><br></a>
-    </div>
-</div>
 
-</body>
-</html>
-    
-    <!--测试模式2-->                   
-    <!-- 关于网站 -->
+<body>
+        <div class="bottom-cover" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(244 248 251 / 0.6) 50%, rgb(244 248 251) 100%);"></div>
+    </div>
+
+   
+                        <!-- 关于网站 -->
                         </br><!--div align="center"-->
           <!--img src="img/gzgzg.png" width="292" height="105"-->
        </div>
-                        <i class="linecons-tag" style="margin-right: 7px;" id="置顶"></i><h2 align="center">小胡小胡的书签</h2></li>
+                        <i class="linecons-tag" style="margin-right: 7px;" id="top"></i><h2 align="center">香水</h2></li>
                         <!-- h4 align="center"><a href="">分类版</a> <a href=""><color="color:#2100E0">主页版</color></a></h4--> 
     <div class="container" style="margin-top: 100px; position: relative; z-index: 100;">
         <!--搜索开始-->
@@ -221,19 +141,28 @@
             <div id="search-list" class="hide-type-list">
                 <div class="search-group group-a s-current" style="padding-left: 20px">
                     <ul class="search-type">
-                        <li><input hidden="" type="radio" name="type" id="type-google" value="https://search.imissu.today/search?hl=zh-CN&q=" data-placeholder="谷歌镜像搜索可直接使用"><label for="type-google"><span style="color:#3B83FA">谷歌镜像</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-google" value="https://metaso.cn/?q=" data-placeholder="秘塔AI 搜索"><label for="type-google"><span style="color:#3B83FA">秘塔</span></label></li>
+                        <li><input checked="" hidden="" type="radio" name="type" id="type-360" value="https://so.360.com/?q=" data-placeholder="360 AI搜索"><label for="type-360"><span style="color:#2100E0">360</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-tiangong" value="https://tiangong.cn/result/?q=" data-placeholder="天工 AI 搜索"><label for="type-tiangong"><span style="color:#b1870b">天工</span></label></li>
                         <li><input checked="" hidden="" type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="你自己不会百度吗？"><label for="type-baidu"><span style="color:#2100E0">百度</span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-soupian" value="https://soupian.pro/search?key=" data-placeholder="电影、剧集、综艺、动漫"><label for="type-soupian"><span style="color:#b1870b">影视</span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-guge" value="https://www.google.com.hk/search?hl=zh-CN&q=" data-placeholder="谷歌搜索"><label for="type-guge"><span style="color:#3B83FA">谷歌</span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="必应搜索"><label for="type-bing"><span style="color:#2100E0">必应</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="必应搜索"><label for="type-bing"><span style="color:#2100E0">必应</span></label></li><br>
                         <li><input hidden="" type="radio" name="type" id="type-weibo" value="https://s.weibo.com/weibo/" data-placeholder="微博搜索"><label for="type-weibo"><span style="color:#F7DC6F">微博</span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-douyin" value="https://www.douyin.com/search/" data-placeholder="抖音搜索"><label for="type-douyin"><span style="color:#212F3C">抖音</span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-xiao" value="https://www.xiaohongshu.com/search_result?keyword=" data-placeholder="小红书搜索"><label for="type-xiao"><span style="color:#FF3352">小红书</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-soupian" value="https://soupian.pro/search?key=" data-placeholder="电影、剧集、综艺、动漫"><label for="type-soupian"><span style="color:#b1870b">影视</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-xs" value="https://www.nosetime.com/search.php?x=0&y=0&word=" data-placeholder="香水时代搜索"><label for="type-xs"><span style="color:#3B83FA">香水时代</span></label></li>>
+                        <li><input hidden="" type="radio" name="type" id="type-ams" value="https://www.hermes.cn/cn/zh/search/?s=" data-placeholder="爱马仕官网价格查询"><label for="type-ams"><span style="color:#2100E0">爱马仕</span></label></li><br>
+                        <li><input hidden="" type="radio" name="type" id="type-cdfms" value="https://www.cdfgsanya.com/product-list.html?sw=" data-placeholder="CDF 免税价格查询"><label for="type-cdfms"><span style="color:#F7DC6F">CDF免税</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-frag" value="https://www.fragrancenet.cn/search/result?q=" data-placeholder="fragrancenet价格查询"><label for="type-frag"><span style="color:#212F3C">fragrancenet</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-amn" value="https://www.armani.cn/product/list?q=%1&b=ga" data-placeholder="阿玛尼搜索"><label for="type-amn"><span style="color:#FF3352">阿玛尼</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-soupian" value="https://soupian.pro/search?key=" data-placeholder="电影、剧集、综艺、动漫"><label for="type-soupian"><span style="color:#b1870b">影视</span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-xs" value="https://www.nosetime.com/search.php?x=0&y=0&word=" data-placeholder="香水时代搜索"><label for="type-xs"><span style="color:#3B83FA">香水时代</span></label></li>>
                     </ul>
                 </div>
             </div>
-            <form action="https://search.imissu.today/search?hl=zh-CN&q=" method="get" target="_blank" id="super-search-fm">
-                <input type="text" id="search-text" placeholder="镜像谷歌可直接搜索" style="outline:0" autocomplete="off">
+            <form action="https://metaso.cn/?q=" method="get" target="_blank" id="super-search-fm">
+                <input type="text" id="search-text" placeholder="搜索" style="outline:0" autocomplete="off">
                 <button class="submit" type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;" class="icon" aria-hidden="true">
                         <use xlink:href="#icon-sousuo"></use>
                     </svg><span></button>
@@ -244,90 +173,25 @@
             </div>
         </div>
         <!--搜索结束-->
-        <!-- skin-white -->
-        <!DOCTYPE html>
-<html lang="cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .title-container {
-            display: flex;
-            flex-wrap: wrap; /* 允许内容换行 */
-            gap: 10px; /* 调整标题之间的间距 */
-        }
-        .title-container a {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px; /* 添加内边距 */
-            background-color: #f0f0f0; /* 添加背景颜色 */
-            border-radius: 5px; /* 添加圆角 */
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit; /* 继承父元素颜色 */
-            white-space: nowrap; /* 防止链接内部换行 */
-        }
-        .title-container a i {
-            margin-right: 5px; /* 图标和文本之间的间距 */
-        }
-    </style>
-</head>
-<body>
-    <div class="page-container">
-        <div class="sidebar-menu toggle-others fixed">
-            <div class="sidebar-menu-inner">
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="" data-toggle="user-info-menu"></a>
-                    <a href="" data-toggle="mobile-menu"></a>
-                </div>
-                <ul id="main-menu" class="main-menu">
-                    <li>
-                        <div class="title-container">
-                            <a href="#AI集合" class="smooth">
-                                <span class="title">AI</span>
-                            </a>
-                            <a href="#邮箱" class="smooth">
-                                <i class="linecons-star"></i>
-                                <span class="title">邮箱</span>
-                            </a>
-                            <a href="#今日热榜" class="smooth">
-                                <span class="title">今日热榜</span>
-                            </a>
-                            <a href="#影视资源" class="smooth">
-                                <span class="title">影视资源</span>
-                            </a>
-                            <a href="#在线工具" class="smooth">
-                                <span class="title">在线工具</span>
-                            </a>
-                            <a href="#看书搜书" class="smooth">
-                                <span class="title">看书搜书</span>
-                            </a>
-                            <a href="#网盘存储" class="smooth">
-                                <span class="title">网盘存储</span>
-                            </a>
-                            <a href="#图片工具" class="smooth">
-                                <span class="title">图片工具</span>
-                            </a>
-                            <a href="#文本识别" class="smooth">
-                                <span class="title">文本识别</span>
-                            </a>
-                            <a href="#自媒体平台" class="smooth">
-                                <span class="title">自媒体</span>
-                            </a>
-                            <a href="#在线文档" class="smooth">
-                                <span class="title">在线文档</span>
-                            </a>
-                            <a href="#我的常用" class="smooth">
-                                <span class="title">我的常用</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        
+     <ul class="mylist row">
+            <!------>
+            <li class="title"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-remen"></use>
+                </svg> <i class="linecons-tag" style="margin-right: 7px;" id="香水导航"></i>香水导航</li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.chanel.cn/cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#"></use>
+                    </svg><span>Chanel</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.hermes.cn/cn/zh/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#"></use>
+                    </svg><span>Hermes</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.dior.cn/zh_cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#"></use>
+                    </svg><span>Dior</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.armani.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#"></use>
+                    </svg><span>Armani</span></a></li>
+        </ul>
      <ul class="mylist row">
              <!------>
             <li class="title"><svg class="icon" aria-hidden="true">
@@ -345,15 +209,9 @@
             <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://github.com/Alvin9999/new-pac/wiki/%E8%B0%B7%E6%AD%8C%E9%95%9C%E5%83%8F" target="_blank"><svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-guge"></use>
                     </svg><span>谷歌镜像导航</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://search.imissu.today/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-guge"></use>
-                    </svg><span>谷歌镜像1</span></a></li>
             <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://so.niostack.com/" target="_blank"><svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-guge"></use>
-                    </svg><span>谷歌镜像2</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.sowai.cn/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-guge"></use>
-                    </svg><span>谷歌镜像3</span></a></li>
+                    </svg><span>谷歌镜像</span></a></li>
             <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://huawei.com.tw/earth/" target="_blank"><svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-gugediqiu"></use>
                     </svg><span>谷歌地图镜像</span></a></li>
@@ -615,6 +473,183 @@
                     </svg><span>阿里企业邮箱</span></a></li>
 
                     
+        </ul>
+        <ul class="mylist row">
+             <!------>
+            <li class="title"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-remen"></use>
+                </svg> <i class="linecons-tag" style="margin-right: 7px;" id="我的常用"></i>我的常用</li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://todo.wps.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wps"></use>
+                    </svg><span>WPS待办</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://search.chongbuluo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo"></use>
+                    </svg><span>虫部落快搜</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.xiaohongshu.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiaohongshu"></use>
+                    </svg><span>小红书</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://weibo.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg><span>微博</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.52pojie.cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wuaipojie"></use>
+                    </svg><span>吾爱破解</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://tophub.today" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jinrirebang"></use>
+                    </svg><span>今日热榜</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://docs.qq.com/desktop/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tengxunwendang"></use>
+                    </svg><span>腾讯文档</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://shimo.im/dashboard/used" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-favicon"></use>
+                    </svg><span>石墨文档</span></a></li>   
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://r.qq.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixindushu"></use>
+                    </svg><span>微信读书</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://fjjyxy.edu-edu.com.cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xuexiao"></use>
+                    </svg><span>福建教育</span></a></li>
+           <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://filehelper.weixin.qq.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixinwenjian"></use>
+                    </svg><span>微信文件传输</span></a></li>
+           <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mail.163.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-youxiang"></use>
+                    </svg><span>163邮箱</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mubu.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-mubudaoru"></use>
+                    </svg><span>幕布</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://818ps.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tuguaishou"></use>
+                    </svg><span>图怪兽</span></a></li>  
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.gaoding.com/s/newmedia" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gaodingsheji"></use>
+                    </svg><span>稿定设计</span></a></li>  
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://koutu.58pic.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qiantuwang"></use>
+                    </svg><span>千图抠图</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://txtpad.cn/xhxh" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-icon"></use>
+                    </svg><span>文本派</span></a></li> 
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://www.53bk.com/baokan" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-baokanzazhi"></use>
+                    </svg><span>全国报刊</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.gushiwen.cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tangshi"></use>
+                    </svg><span>古诗文网</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://wannianli.tianqi.com/jieri/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tangshi"></use>
+                    </svg><span>中国传统节日</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://qq.ip138.com/day" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhonghuawannianli"></use>
+                    </svg><span>万年历查询</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://cli.im/deqr" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-cli"></use>
+                    </svg><span>草料二维码</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://wuqibazao.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wodeketang"></use>
+                    </svg><span>班叔社群</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://appvuhzsfv86073.pc.xiaoe-tech.com/page/2264035?navIndex=0" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wodeketang"></use>
+                    </svg><span>班叔课堂</span></a></li> 
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.v2ex.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vex"></use>
+                    </svg><span>V2EX </span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://dalao.ru" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-dian"></use>
+                    </svg><span>大佬点入</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://youquhome.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-website2"></use>
+                    </svg><span>有趣网址之家</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://note.ms" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wp-jsb"></use>
+                    </svg><span>公共记事本</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.mfpad.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-mi"></use>
+                    </svg><span>米发</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://gitee.com" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-GITEE"></use>
+                    </svg><span>Gitee</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.runningcheese.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiongmao"></use>
+                    </svg><span>奔跑中的奶酪</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mm.edrawsoft.cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibiaoti-1-02"></use>
+                    </svg><span>亿图脑图</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://ai.xiabb.chat/home" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-chat"></use>
+                    </svg><span>阿水Chat</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://cloud.139.com/#/cloudphone" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yidongyun"></use>
+                    </svg><span>云手机</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://sunlogin.oray.com/share?shareid=1408232313" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yidongyun"></use>
+                    </svg><span>电脑</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://github.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-GitHub"></use>
+                    </svg><span>Github</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.islide.cc/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-i"></use>
+                    </svg><span>iSlide</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://axutongxue.onrender.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-dongmanzhuanti"></use>
+                    </svg><span>阿虚同学</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://github.com/Cry1ngMan/1" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-C"></use>
+                    </svg><span>Cry1ngMan</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://metaso.cn" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-mitaxiezuomao"></use>
+                    </svg><span>秘塔 AI搜索</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://k1q4247749.vicp.fun/123/123kuaqu.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wangzherongyao"></use>
+                    </svg><span>创建组队</span></a>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://k1q4247749.vicp.fun/123/123jiaru.html" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-wangzherongyao"></use>
+                    </svg><span>加入组队</span></a>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.nosetime.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiangshui"></use>
+                    </svg><span>香水时代</span></a>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.cdfgsanya.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-cdf"></use>
+                    </svg><span>CDF免税店</span></a>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.fragrancenet.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-icon-test"></use>
+                    </svg><span>fragrancenet</span></a>
+        </ul>
+    <ul class="mylist row">
+             <!------>
+            <li class="title"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-remen"></use>
+                </svg> 抖音</li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.douyin.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-douyin"></use>
+                    </svg><span>抖音</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://e.douyin.com/site/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juliangyinqing"></use>
+                    </svg><span>抖音企业号</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://eos.douyin.com/site/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juliangyinqing"></use>
+                    </svg><span>抖音企业直播</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://fxg.jinritemai.com/ffa/g/list" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-douyinxiaodian"></use>
+                     </svg><span>抖店小店</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://buyin.jinritemai.com/mpa/account/login?log_out=1&type=24" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juliangsuanshu"></use>
+                     </svg><span>抖音小店直播</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://h30th5bn54.feishu.cn/docs/doccnys3iIWNZGKL1fgW6LEDdXb" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ziliaoku"></use>
+                    </svg><span>抖音资料</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.chanmama.com/douyin" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-a-chanmamaapptubiao-50"></use>
+                    </svg><span>蝉妈妈</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://school.oceanengine.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juliangsuanshu"></use>
+                    </svg><span>巨量学</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://trendinsight.oceanengine.com/arithmetic-index" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juliangsuanshu"></use>
+                    </svg><span>抖音巨量算数</span></a></li>
+            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://anchor.douyin.com/anchor/dashboard" target="_blank"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhibodaping"></use>
+                    </svg><span>直播大屏</span></a></li>   
         </ul>
         <ul class="mylist row">
             <!------>
@@ -1553,8 +1588,6 @@
             <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://www.hippter.com" target="_blank">
                     </svg><span>PPT 资源导航 2</span></a></li>
         </ul>
-        <ul class="mylist row">
-            <!------>
         
         <ul class="mylist row">
             <li class="title"><svg class="icon" aria-hidden="true">
@@ -1708,256 +1741,6 @@
                         <use xlink:href="#icon-S"></use>
                     </svg><span>Swiper</span></a></li>
         </ul>
-        <ul class="mylist row">
-             <!------>
-            <li class="title"><svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-remen"></use>
-                </svg> <i class="linecons-tag" style="margin-right: 7px;" id="我的常用"></i>我的常用</li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://google.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-guge"></use>
-                    </svg><span>谷歌搜索</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://search.chongbuluo.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-sousuo"></use>
-                    </svg><span>虫部落快搜</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.xiaohongshu.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-xiaohongshu"></use>
-                    </svg><span>小红书</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://weibo.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
-                    </svg><span>微博</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.52pojie.cn" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wuaipojie"></use>
-                    </svg><span>吾爱破解</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://tophub.today" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-jinrirebang"></use>
-                    </svg><span>今日热榜</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://docs.qq.com/desktop/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-tengxunwendang"></use>
-                    </svg><span>腾讯文档</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://shimo.im/dashboard/used" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-favicon"></use>
-                    </svg><span>石墨文档</span></a></li>   
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://r.qq.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weixindushu"></use>
-                    </svg><span>微信读书</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://fjjyxy.edu-edu.com.cn" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-xuexiao"></use>
-                    </svg><span>福建教育</span></a></li>
-           <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://filehelper.weixin.qq.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weixinwenjian"></use>
-                    </svg><span>微信文件传输</span></a></li>
-           <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mail.163.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-youxiang"></use>
-                    </svg><span>163邮箱</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mubu.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-mubudaoru"></use>
-                    </svg><span>幕布</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://818ps.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-tuguaishou"></use>
-                    </svg><span>图怪兽</span></a></li>  
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.gaoding.com/s/newmedia" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-gaodingsheji"></use>
-                    </svg><span>稿定设计</span></a></li>  
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://koutu.58pic.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-qiantuwang"></use>
-                    </svg><span>千图抠图</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://txtpad.cn/xhxh" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-icon"></use>
-                    </svg><span>文本派</span></a></li> 
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://www.53bk.com/baokan" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-baokanzazhi"></use>
-                    </svg><span>全国报刊</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.gushiwen.cn" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-tangshi"></use>
-                    </svg><span>古诗文网</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://wannianli.tianqi.com/jieri/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-tangshi"></use>
-                    </svg><span>中国传统节日</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://qq.ip138.com/day" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-zhonghuawannianli"></use>
-                    </svg><span>万年历查询</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://cli.im/deqr" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-cli"></use>
-                    </svg><span>草料二维码</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://wuqibazao.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wodeketang"></use>
-                    </svg><span>班叔社群</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://appvuhzsfv86073.pc.xiaoe-tech.com/page/2264035?navIndex=0" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wodeketang"></use>
-                    </svg><span>班叔课堂</span></a></li> 
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.v2ex.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-vex"></use>
-                    </svg><span>V2EX </span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://dalao.ru" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-dian"></use>
-                    </svg><span>大佬点入</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://youquhome.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-website2"></use>
-                    </svg><span>有趣网址之家</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://note.ms" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wp-jsb"></use>
-                    </svg><span>公共记事本</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.mfpad.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-mi"></use>
-                    </svg><span>米发</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://gitee.com" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-GITEE"></use>
-                    </svg><span>Gitee</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.runningcheese.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-xiongmao"></use>
-                    </svg><span>奔跑中的奶酪</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://mm.edrawsoft.cn" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibiaoti-1-02"></use>
-                    </svg><span>亿图脑图</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://ai.xiabb.chat/home" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-chat"></use>
-                    </svg><span>阿水Chat</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://cloud.139.com/#/cloudphone" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-yidongyun"></use>
-                    </svg><span>云手机</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://sunlogin.oray.com/share?shareid=1408232313" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-yidongyun"></use>
-                    </svg><span>电脑</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://github.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-GitHub"></use>
-                    </svg><span>Github</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.islide.cc/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-i"></use>
-                    </svg><span>iSlide</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://axutongxue.onrender.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-dongmanzhuanti"></use>
-                    </svg><span>阿虚同学</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://github.com/Cry1ngMan/1" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-C"></use>
-                    </svg><span>Cry1ngMan</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://metaso.cn" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-mitaxiezuomao"></use>
-                    </svg><span>秘塔 AI搜索</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://k1q4247749.vicp.fun/kuaqu.html" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wangzherongyao"></use>
-                    </svg><span>创建组队</span></a>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="http://k1q4247749.vicp.fun/jiaru.html" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-wangzherongyao"></use>
-                    </svg><span>加入组队</span></a>
-        </ul>
-    <ul class="mylist row">
-             <!------>
-            <li class="title"><svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-remen"></use>
-                </svg> 抖音</li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.douyin.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-douyin"></use>
-                    </svg><span>抖音</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://e.douyin.com/site/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juliangyinqing"></use>
-                    </svg><span>抖音企业号</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://eos.douyin.com/site/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juliangyinqing"></use>
-                    </svg><span>抖音企业直播</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://fxg.jinritemai.com/ffa/g/list" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-douyinxiaodian"></use>
-                     </svg><span>抖店小店</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://buyin.jinritemai.com/mpa/account/login?log_out=1&type=24" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juliangsuanshu"></use>
-                     </svg><span>抖音小店直播</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://h30th5bn54.feishu.cn/docs/doccnys3iIWNZGKL1fgW6LEDdXb" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-ziliaoku"></use>
-                    </svg><span>抖音资料</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://www.chanmama.com/douyin" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-a-chanmamaapptubiao-50"></use>
-                    </svg><span>蝉妈妈</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://school.oceanengine.com/" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juliangsuanshu"></use>
-                    </svg><span>巨量学</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://trendinsight.oceanengine.com/arithmetic-index" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juliangsuanshu"></use>
-                    </svg><span>抖音巨量算数</span></a></li>
-            <li class="col-3 col-sm-2 col-md-2 col-lg-2"><a rel="nofollow" href="https://anchor.douyin.com/anchor/dashboard" target="_blank"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-zhibodaping"></use>
-                    </svg><span>直播大屏</span></a></li>   
-        </ul>
-        <!-- skin-white -->
-        <!DOCTYPE html>
-<html lang="cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .title-container {
-            display: flex;
-            flex-wrap: wrap; /* 允许内容换行 */
-            gap: 10px; /* 调整标题之间的间距 */
-        }
-        .title-container a {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px; /* 添加内边距 */
-            background-color: #f0f0f0; /* 添加背景颜色 */
-            border-radius: 5px; /* 添加圆角 */
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit; /* 继承父元素颜色 */
-            white-space: nowrap; /* 防止链接内部换行 */
-        }
-        .title-container a i {
-            margin-right: 5px; /* 图标和文本之间的间距 */
-        }
-    </style>
-</head>
-<body>
-    <div class="page-container">
-        <div class="sidebar-menu toggle-others fixed">
-            <div class="sidebar-menu-inner">
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="" data-toggle="user-info-menu"></a>
-                    <a href="" data-toggle="mobile-menu"></a>
-                </div>
-                <ul id="main-menu" class="main-menu">
-                    <li>
-                        <div class="title-container">
-                            <a href="#置顶" class="smooth">
-                                <span class="title">返回顶部</span>
-                            </a>
-                            <a href="#AI集合" class="smooth">
-                                <span class="title">AI</span>
-                            </a>
-                            <a href="#邮箱" class="smooth">
-                                <i class="linecons-star"></i>
-                                <span class="title">邮箱</span>
-                            </a>
-                            <a href="#今日热榜" class="smooth">
-                                <span class="title">今日热榜</span>
-                            </a>
-                            <a href="#影视资源" class="smooth">
-                                <span class="title">影视资源</span>
-                            </a>
-                            <a href="#在线工具" class="smooth">
-                                <span class="title">在线工具</span>
-                            </a>
-                            <a href="#看书搜书" class="smooth">
-                                <span class="title">看书搜书</span>
-                            </a>
-                            <a href="#网盘存储" class="smooth">
-                                <span class="title">网盘存储</span>
-                            </a>
-                            <a href="#图片工具" class="smooth">
-                                <span class="title">图片工具</span>
-                            </a>
-                            <a href="#文本识别" class="smooth">
-                                <span class="title">文本识别</span>
-                            </a>
-                            <a href="#自媒体平台" class="smooth">
-                                <span class="title">自媒体</span>
-                            </a>
-                            <a href="#在线文档" class="smooth">
-                                <span class="title">在线文档</span>
-                            </a>
-                            <a href="#我的常用" class="smooth">
-                                <span class="title">我的常用</span>
-                            </a><pre class="mt-5 mb-3 text-muted text-left">
-        小胡自己收藏的网址，仅限本人做个人书签使用,网站来源于网络，对其内容不负任何责任。
-        若本站内容无意中侵犯到您的版权利益，请联系我们，我们会在收到信息后尽快给予处理，联系邮箱：httcup@gmali.com
-    </pre>
                         </div>
                     </li>
                 </ul>
