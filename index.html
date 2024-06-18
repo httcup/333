@@ -168,31 +168,46 @@
         </div>
         <!--搜索结束-->
         <div class="header-extra">
-                <div id="mallSearch" class="mall-search">
-                                                                                                    <form name="searchTop" action="//list.tmall.hk/search_product.htm"
-                          class="mallSearch-form">
-                        <fieldset>
-                            <legend>天猫搜索</legend>
-                            <div class="mallSearch-input clearfix">
-                                <div class="defaultSearch">
-                                    <input type="text" name="q"  data-current="https://nasomatto.tmall.hk"  accesskey="s" autocomplete="off" x-webkit-speech=""
-                                           x-webkit-grammar="builtin:search" value="" id="mq">
-                                    <button id="J_SearchBtn" type="submit">
-                                                                                    搜天猫国际
-                                                                                <s></s></button>
-                                                                    </div>
-                                <button id="J_CurrShopBtn" class="currShopBtn" type="button">搜本店<s></s></button>
-                                <input id="J_Type" type="hidden" name="type" value="p">
-                                <input id="J_MallSearchStyle" type="hidden" name="style" value="">
-                                <input id="J_Cat" type="hidden" name="cat" value="all">
-                            </div>
-                        </fieldset>
-                    </form>
+    <div id="mallSearch" class="mall-search">
+        <form name="searchTop" action="//list.tmall.com/search_product.htm" class="mallSearch-form">
+            <fieldset>
+                <legend>天猫搜索</legend>
+                <div class="mallSearch-input clearfix">
+                    <div class="defaultSearch">
+                        <!-- 搜索框 -->
+                        <input type="text" name="q" data-current="" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search" value="" id="mq">
+                        <!-- 搜索按钮，现在只显示"搜本店" -->
+                        <button id="J_SearchBtn" type="submit">
+                            搜本店
+                            <s></s>
+                        </button>
+                    </div>
+                    <!-- 新增搜索地址选择下拉菜单 -->
+                    <div class="search-address-selector">
+                        <label for="searchAddress">选择搜索地址：</label>
+                        <select id="searchAddress" name="searchAddress">
+                            <option value="https://nasomatto.tmall.hk">nasomatto</option>
+                            <option value="https://tomfordbeauty.tmall.com/">汤姆福特</option>
+                            <option value="https://burberrybeauty.tmall.com/">BURB</option>
+                            
+                            <!-- 可以添加更多店铺地址 -->
+                        </select>
+                    </div>
+                    <!-- 隐藏的输入字段，用于存储选中的搜索地址 -->
+                    <input id="J_ShopSearchUrl" type="hidden" />
                 </div>
-            </div>
-        </div>
-                            <input id="J_ShopSearchUrl" type="hidden" value="https://nasomatto.tmall.hk" />
-            </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<script>
+    // 脚本用于设置选中的搜索地址
+    document.getElementById('searchAddress').addEventListener('change', function() {
+        document.getElementById('J_ShopSearchUrl').value = this.value;
+        document.querySelector('[name="searchTop"] [name="q"]').setAttribute('data-current', this.value);
+    });
+</script>
         
      <ul class="mylist row">
             <!------>
