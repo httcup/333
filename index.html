@@ -166,8 +166,7 @@
                 <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
         </div>
-        <!--搜索结束-->
-        <div class="header-extra">
+        <!--搜索结束--><div class="header-extra">
     <div id="mallSearch" class="mall-search">
         <form name="searchTop" action="//list.tmall.com/search_product.htm" class="mallSearch-form">
             <fieldset>
@@ -175,26 +174,21 @@
                 <div class="mallSearch-input clearfix">
                     <div class="defaultSearch">
                         <!-- 搜索框 -->
-                        <input type="text" name="q" data-current="" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search" value="" id="mq">
-                        <!-- 搜索按钮，现在只显示"搜本店" -->
-                        <button id="J_SearchBtn" type="submit">
-                            搜本店
-                            <s></s>
-                        </button>
-                    </div>
-                    <!-- 新增搜索地址选择下拉菜单 -->
-                    <div class="search-address-selector">
-                        <label for="searchAddress">选择搜索地址：</label>
+                        <input type="text" name="q" id="mq" placeholder="输入搜索内容">
+                        <!-- 下拉菜单选择搜索地址 -->
                         <select id="searchAddress" name="searchAddress">
-                            <option value="https://nasomatto.tmall.hk">nasomatto</option>
-                            <option value="https://tomfordbeauty.tmall.com/">汤姆福特</option>
-                            <option value="https://burberrybeauty.tmall.com/">BURB</option>
-                            
-                            <!-- 可以添加更多店铺地址 -->
+                            <option value="https://nasomatto.tmall.hk">地址1</option>
+                            <option value="https://burberrybeauty.tmall.com/">bur</option>
+                            <!-- 可以添加更多地址 -->
                         </select>
+                        <!-- 搜索按钮，每个按钮对应一个搜索地址 -->
+                        <button type="button" onclick="searchProduct('https://nasomatto.tmall.hk')">搜地址1</button>
+                        <button type="button" onclick="searchProduct('https://burberrybeauty.tmall.com/')">搜but</button>
+                        <!-- 可以添加更多搜索按钮 -->
                     </div>
-                    <!-- 隐藏的输入字段，用于存储选中的搜索地址 -->
-                    <input id="J_ShopSearchUrl" type="hidden" />
+                    <input id="J_Type" type="hidden" name="type" value="p">
+                    <input id="J_MallSearchStyle" type="hidden" name="style" value="">
+                    <input id="J_Cat" type="hidden" name="cat" value="all">
                 </div>
             </fieldset>
         </form>
@@ -202,11 +196,15 @@
 </div>
 
 <script>
-    // 脚本用于设置选中的搜索地址
-    document.getElementById('searchAddress').addEventListener('change', function() {
-        document.getElementById('J_ShopSearchUrl').value = this.value;
-        document.querySelector('[name="searchTop"] [name="q"]').setAttribute('data-current', this.value);
-    });
+    // JavaScript函数，用于执行搜索
+    function searchProduct(address) {
+        var searchQuery = document.getElementById('mq').value;
+        var searchForm = document.forms.namedItem('searchTop');
+        // 将表单的action属性设置为选中的地址
+        searchForm.action = address + '/search_product.htm';
+        // 提交表单
+        searchForm.submit();
+    }
 </script>
         
      <ul class="mylist row">
