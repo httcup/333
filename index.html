@@ -166,46 +166,25 @@
                 <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
         </div>
-        <!--搜索结束--><div class="header-extra">
-    <div id="mallSearch" class="mall-search">
-        <form name="searchTop" action="//list.tmall.com/search_product.htm" class="mallSearch-form">
-            <fieldset>
-                <legend>天猫搜索</legend>
-                <div class="mallSearch-input clearfix">
-                    <div class="defaultSearch">
-                        <!-- 搜索框 -->
-                        <input type="text" name="q" id="mq" placeholder="输入搜索内容">
-                        <!-- 下拉菜单选择搜索地址 -->
-                        <select id="searchAddress" name="searchAddress">
-                            <option value="https://nasomatto.tmall.hk">地址1</option>
-                            <option value="https://burberrybeauty.tmall.com/">bur</option>
-                            <!-- 可以添加更多地址 -->
-                        </select>
-                        <!-- 搜索按钮，每个按钮对应一个搜索地址 -->
-                        <button type="button" onclick="searchProduct('https://nasomatto.tmall.hk')">搜地址1</button>
-                        <button type="button" onclick="searchProduct('https://burberrybeauty.tmall.com/')">搜but</button>
-                        <!-- 可以添加更多搜索按钮 -->
-                    </div>
-                    <input id="J_Type" type="hidden" name="type" value="p">
-                    <input id="J_MallSearchStyle" type="hidden" name="style" value="">
-                    <input id="J_Cat" type="hidden" name="cat" value="all">
+        <!--搜索结束--><div id="mallSearch" class="mall-search">
+                                                                                <form name="searchTop" action="//list.tmall.com/search_product.htm" class="mallSearch-form" accept-charset="gbk">
+                        <fieldset>
+                            <legend>天猫搜索</legend>
+                            <div class="mallSearch-input clearfix">
+                                <div class="defaultSearch">
+                                    <div id="s-combobox-242" class="s-combobox"><div class="s-combobox-input-wrap"><input type="text" name="q" data-current="//burberrybeauty.tmall.com" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" value="" id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字"></div><label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">搜索 天猫 商品/品牌/店铺</label></div>
+                                    <button id="J_SearchBtn" type="submit">
+                                                                                    搜天猫
+                                                                                <s></s></button>
+                                                                    </div>
+                                <button id="J_CurrShopBtn" class="currShopBtn" type="button">搜本店<s></s></button>
+                                <input id="J_Type" type="hidden" name="type" value="p">
+                                <input id="J_MallSearchStyle" type="hidden" name="style" value="">
+                                <input id="J_Cat" type="hidden" name="cat" value="all">
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-            </fieldset>
-        </form>
-    </div>
-</div>
-
-<script>
-    // JavaScript函数，用于执行搜索
-    function searchProduct(address) {
-        var searchQuery = document.getElementById('mq').value;
-        var searchForm = document.forms.namedItem('searchTop');
-        // 将表单的action属性设置为选中的地址
-        searchForm.action = address + '/search_product.htm';
-        // 提交表单
-        searchForm.submit();
-    }
-</script>
         
      <ul class="mylist row">
             <!------>
